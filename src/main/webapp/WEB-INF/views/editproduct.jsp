@@ -41,6 +41,10 @@
 <body>
 
 
+
+
+
+
 <div class ="container">
 
 <div class="panel panel-default">
@@ -65,14 +69,30 @@
 	<td>${product.productCondition} </td>
 	<br/>
 	<td>New Product Condition :  </td>
-	<td><form:input path="productCondition" type ="text" required="required"/></td>
+	<td><%-- <form:input path="productCondition" type ="text" required="required"/> --%>
+		<form:select path ="productCondition" required ="required">
+			<form:option value ="New" label ="New"/>
+			<form:option value ="Excellent" label ="Excellent"/>
+			<form:option value ="Good" label ="Good"/>
+			<form:option value ="Poor" label ="Poor"/>
+		</form:select>
+	
+	</td>
 	<br/>
 
 	<td>Current Product Category : </td>
 	<td>${product.productCategory } </td>
 	<br/>
 	<td>New Product Category :  </td>
-	<td><form:input path="productCategory" type ="text" required="required"/></td>
+	<td><%-- <form:input path="productCategory" type ="text" required="required"/> --%>
+		<form:select path ="productCategory" required="required">
+			<form:option value ="instrument" label= "Instrument"/>
+			<form:option value = "record" label ="Record"/>
+			<form:option value ="musiccomposition" label ="MusicComposition"/> 
+		</form:select>
+	</td>
+	
+	
 	<br/>
 	
 	<td>Current Product Price </td>

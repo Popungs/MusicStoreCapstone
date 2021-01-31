@@ -167,7 +167,7 @@
 				 	<td>${product.productName}</td>
 				 	<td>${product.productCondition }</td>
 				 	<td>${product.productCategory } </td>
-				 	<td>${product.productPrice } </td>
+				 	<td>$${product.productPrice } </td>
 				 	<td>
 				 	<a href = "/productdetail?id=${product.id}"><span class="glyphicon glyphicon-zoom-in"></span></a>
 				 	<% if (!role.equals("")) { %>

@@ -42,9 +42,23 @@ th, td,.panel-heading, .panel-footer, .panel-body {
 			 	<form method="post" >
 		 	Product Name : <input type = "text" name ="productName" required>
 			<br/>
-			Product Category : <input type ="text" name ="productCategory" required>
+			<label for ="productCategory">Product Category</label>
+			<select id ="productCategory" name = "productCategory" required>
+			<option value ="instrument">Instrument</option>
+			<option value ="record">Record</option>
+			<option value ="musiccomposition">MusicComposition</option>
+			</select>
+		<!-- 	Product Category : <input type ="text" name ="productCategory" required> -->
 			<br/>
-			Product Condition : <input type ="text" name ="productCondition" required>
+			<label for ="productCondition">Product Condition</label>
+			<select id ="producCondition" name="productCondition" required>
+			<option value ="New">New</option>
+			<option value ="Excellent">Excellent</option>
+			<option value ="Good">Good</option>
+			<option value ="Poor">Poor</option>
+			</select>
+			
+			<!-- Product Condition : <input type ="text" name ="productCondition" required> -->
 			<br/>
 			Product Price : <input type = "number"  step="0.01" name ="productPrice"  required>
 			<br/>

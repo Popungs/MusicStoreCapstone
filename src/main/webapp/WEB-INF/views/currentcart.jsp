@@ -119,7 +119,7 @@ a {
 								out.println(p.getProductCategory());
 								%>
 							</td>
-							<td>
+							<td>$
 								<%
 								out.println(p.getProductPrice());
 								%>

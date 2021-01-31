@@ -100,7 +100,7 @@ dt = c.getTime(); %>
 				 	<td>
 				 	<% out.println(p.getProductCategory()); %>
 				 	</td>
-				 	<td>
+				 	<td>$
 				 	<% out.println(p.getProductPrice()); %> 
 				 	</td>
 				 	

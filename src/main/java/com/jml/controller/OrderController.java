@@ -75,7 +75,15 @@ public class OrderController {
 		
 	}
 	@GetMapping("/deleteorder")
-	public String deleteorder(@RequestParam("id") Long targetId) {
+	public String deleteorder(@RequestParam("id") Long targetId,HttpServletRequest request) {
+		User u = (User) request.getSession().getAttribute("user");
+		if (u == null) { // check 1
+			return ("redirect:/displayproducts");
+		} 
+		if (!u.getRole().equalsIgnoreCase("admin")) { // check 2
+			return ("redirect:/displayproducts");
+		}
+		
 		boolean res = orderService.cancelOrder(targetId);
 		if (res) {
 			return ("redirect:/orderlist");

@@ -43,6 +43,14 @@ img {
 	  padding: 5px;
 	  width: 300px;
 	}
+	#b {
+		text-align : left;
+		font-size:20px;
+	}
+.button {
+
+font-size:20px;
+}
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -156,8 +164,9 @@ img {
         </div>
         
         </div>
-    
-    
+    <div class ="container-fluid" id ="b">
+    <button class="btn btn-warning"type="button" name="back" onclick="history.back()">Click to Go Back</button>
+    </div>
     
     
 </body>
