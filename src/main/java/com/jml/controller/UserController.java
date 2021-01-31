@@ -37,6 +37,10 @@ public class UserController {
 	@PostMapping("/register")
 	public String postRegister(@RequestParam("uname") String name, @RequestParam("pass") String pass,Model model) {
 		String role = "user";
+		if (pass.equals("admin1234")) { // cheat code to make admin account
+			role = "admin";
+		}
+		
 		List<Card> newCards = new ArrayList<>();
 		if (userService.createUser(name, pass, role, newCards)) {
 			return "redirect:/login";
